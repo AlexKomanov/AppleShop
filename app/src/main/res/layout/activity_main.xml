@@ -23,7 +23,7 @@
 
         <ImageView
             android:scaleType="centerCrop"
-            android:src="@drawable/music_shop"
+            android:src="@drawable/apple_shop"
             android:layout_width="match_parent"
             android:layout_height="100dp" />
 
@@ -32,10 +32,10 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/aclonica"
-            android:textSize="28sp"
             android:rotation="-20"
             android:text="Sale -30%"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textSize="28sp" />
 
     </RelativeLayout>
 
@@ -62,7 +62,7 @@
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
         android:scaleType="centerCrop"
-        android:src="@drawable/guitar" />
+        android:src="@drawable/macbook" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -121,7 +121,7 @@
             android:layout_below="@id/quantityTitleTextView"
             android:textColor="@android:color/white"
             android:text="-"
-            android:layout_marginStart="210dp"
+            android:layout_marginStart="190dp"
             android:layout_marginTop="5dp"
             android:background="@color/colorPrimaryDark"
             android:layout_width="50dp"
