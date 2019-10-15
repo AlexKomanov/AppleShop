@@ -3,9 +3,11 @@ package com.example.appleshop;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -24,14 +26,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     String goodsName;
     double price;
 
+    EditText userNameEditText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        userNameEditText = findViewById(R.id.nameEditText);
+
         createSpinner();
 
         createMap();
+
 
     }
 
@@ -106,6 +113,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
+
+    public void addToCart(View view) {
+
+        Order order = new Order();
+        order.userName = userNameEditText.getText().toString();
+        order.goodsName = goodsName;
+        order.quantity = quantity;
+        order.orderPrice = quantity * price;
+
+        Log.d("userName", order.userName);
+        Log.d("goodsName", order.goodsName);
+        Log.d("quantity", "" + order.quantity);
+        Log.d("orderPrice", "" + order.orderPrice);
+
 
     }
 }
